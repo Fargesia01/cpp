@@ -1,8 +1,8 @@
-SRCS	= main.cpp
+	SRCS	= main.cpp Replace.cpp
 
 OBJS 	= $(SRCS:.cpp=.o)
 
-NAME	= violence_inutile
+NAME	= sed
 
 CC		= c++
 
