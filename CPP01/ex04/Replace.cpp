@@ -26,7 +26,7 @@ int	Replace::open_files(std::string name, std::string s1, std::string s2)
 		return (1);
 	out_name += ".replace";
 	this->_input_file.open(name);
-	this->_output_file.open(out_name);
+	this->_output_file.open(out_name;;
 	while (std::getline(this->_input_file, line))
 		this->_output(line, s1, s2);
 	this->_input_file.close();
@@ -38,12 +38,13 @@ int	Replace::_output(std::string line, std::string s1, std::string s2)
 {
 	for	(int i = 0; i < line.length(); i++)
 	{
-		if (!line.compare(i, s1.length(), s2))
+		if (!line.compare(i, s1.length(), s1))
 		{
 			line.erase(i, s1.length());
 			line.insert(i, s2);
 		}
 	}
 	this->_output_file << line;
+	this->_output_file << "\n";
 	return (0);
 }
