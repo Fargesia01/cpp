@@ -1,4 +1,4 @@
-SRCS	= main.cpp Replace.cpp
+SRCS	= main.cpp Harl.cpp
 
 OBJS 	= $(SRCS:.cpp=.o)
 
