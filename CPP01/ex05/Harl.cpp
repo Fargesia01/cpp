@@ -2,12 +2,14 @@
 
 Harl::Harl (void)
 {
-
+	std::cout << "Default Harl constructor." << std::endl;
+	return ;
 }
 
 Harl::~Harl(void)
 {
-
+	std::cout << "Default Harl desctuctor." << std::endl;
+	return ;
 }
 
 void	Harl::complain(std::string level)
@@ -15,6 +17,7 @@ void	Harl::complain(std::string level)
 	void	(Harl::*current)(void);
 	std::string c_level[] = {"debug", "info", "warning", "error"};
 	void	(Harl::*complaints[]) (void) = {&Harl::_debug, &Harl::_info, &Harl::_warning, &Harl::_error};
+
 	for (int i = 0; i < 4; i++)
 	{
 		current = complaints[i];

@@ -109,7 +109,7 @@ Fixed	Fixed::operator*(Fixed const &fp) const
 {
 	Fixed	tot;
 
-	tot.setRawBits(this->getRawBits() * fp.getRawBits());
+	tot.setRawBits(this->getRawBits() * fp.getRawBits() / (1 << Fixed::_fp));
 	return (tot);
 }
 
@@ -117,7 +117,7 @@ Fixed	Fixed::operator/(Fixed const &fp) const
 {
 	Fixed	tot;
 
-	tot.setRawBits(this->getRawBits() / fp.getRawBits());
+	tot.setRawBits(this->getRawBits() / fp.getRawBits() * (1 << Fixed::_fp));
 	return (tot);
 }
 
@@ -127,10 +127,26 @@ Fixed	Fixed::operator++()
 	return (*this);
 }
 
+Fixed	Fixed::operator++(int)
+{
+	Fixed tmp(*this);
+
+	operator++();
+	return (tmp);
+}
+
 Fixed	Fixed::operator--()
 {
 	this->_whole--;
 	return (*this);
+}
+
+Fixed	Fixed::operator--(int)
+{
+	Fixed	tmp(*this);
+
+	operator--();
+	return (tmp);
 }
 
 int	Fixed::getRawBits(void) const

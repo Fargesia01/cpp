@@ -1,13 +1,14 @@
 #include <iostream>
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
 	ScavTrap bob("Bob");
-	ClapTrap alice("Alice");
+	FragTrap alice("Alice");
 
 	bob.guardGate();
 	bob.attack("alice");
-	alice.attack("bob");
+	alice.highFivesGuys();
 }

@@ -2,11 +2,13 @@
 
 HumanB::HumanB(std::string name): _name(name)
 {
+	std::cout << "Default Human B constructor." << std::endl;
 	return ;
 }
 
 HumanB::~HumanB(void)
 {
+	std::cout << "Default Human B destructor." << std::endl;
 	return ;
 }
 

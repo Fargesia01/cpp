@@ -2,11 +2,13 @@
 
 HumanA::HumanA(std::string name, Weapon& weapon): _name(name), _weapon(weapon)
 {
+	std::cout << "Human A default constructor called!" << std::endl;
 	return ;
 }
 
 HumanA::~HumanA(void)
 {
+	std::cout << "Human A destructor called!" << std::endl;
 	return ;
 }
 

@@ -4,12 +4,14 @@
 
 Replace::Replace(void)
 {
-
+	std::cout << "Default Replace constructor." << std::endl;
+	return ;
 }
 
 Replace::~Replace(void)
 {
-
+	std::cout << "Default Replace Destructor." << std::endl;
+	return ;
 }
 
 int	Replace::open_files(std::string name, std::string s1, std::string s2)

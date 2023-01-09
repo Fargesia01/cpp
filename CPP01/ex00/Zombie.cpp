@@ -2,6 +2,7 @@
 
 Zombie::Zombie(std::string name): _name(name)
 {
+	std::cout << "Default constructor called!" << std::endl;
 	return ;
 }
 

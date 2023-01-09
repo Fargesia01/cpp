@@ -3,11 +3,13 @@
 
 Weapon::Weapon(std::string type): _type(type)
 {
+	std::cout << "Weapon default constructor called!" << std::endl;
 	return ;
 }
 
 Weapon::~Weapon(void)
 {
+	std::cout << "Weapon desctuctor called!" << std::endl;
 	return ;
 }
 

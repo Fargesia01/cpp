@@ -28,7 +28,9 @@ class	Fixed
 		Fixed	operator/(Fixed const &fp) const;
 
 		Fixed	operator++();
+		Fixed	operator++(int);
 		Fixed	operator--();
+		Fixed	operator--(int);
 		
 		static Fixed		&min(Fixed &fp1, Fixed &fp2);
 		static const Fixed	&min(Fixed const &fp1, Fixed const &fp2);
