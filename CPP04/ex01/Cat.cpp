@@ -4,6 +4,7 @@ Cat::Cat(void)
 {
 	std::cout << "Cat default constructor called." << std::endl;
 	this->type = "Cat";
+	this->brain = new Brain();
 	return ;
 }
 
@@ -17,6 +18,7 @@ Cat::Cat(Cat &src)
 Cat::~Cat(void)
 {
 	std::cout << "Cat destructor called." << std::endl;
+	delete(this->brain);
 	return ;
 }
 
@@ -24,10 +26,16 @@ Cat &	Cat::operator=(Cat &src)
 {
 	std::cout << "Cat assignation operator called." << std::endl;
 	this->type = src.type;
+	*(this->brain) = *(src.getBrain());
 	return (*this);
 }
 
-void const	Cat::makeSound()
+Brain*	Cat::getBrain() const
+{
+	return (this->brain);
+}
+
+void	Cat::makeSound() const
 {
 	std::cout << "Miaou!" << std::endl;
 	return ;

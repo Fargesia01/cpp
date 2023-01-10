@@ -26,12 +26,12 @@ Animal &	Animal::operator=(Animal &src)
 	return (*this);
 }
 
-std::string const	Animal::getType()
+std::string	Animal::getType() const
 {
 	return (this->type);
 }
 
-void const	Animal::makeSound()
+void	Animal::makeSound() const
 {
 	std::cout << "Random animal noise." << std::endl;
 	return ;

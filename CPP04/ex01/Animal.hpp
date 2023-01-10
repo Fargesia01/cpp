@@ -2,6 +2,7 @@
 # define ANIMAL_HPP
 
 #include <iostream>
+#include "Brain.hpp"
 
 class	Animal
 {
@@ -13,8 +14,9 @@ class	Animal
 
 		Animal& operator=(Animal &src);
 
-		std::string const	getType();
-		virtual void const	makeSound();
+		std::string	getType() const;
+		virtual void	makeSound() const;
+		virtual  Brain*	getBrain() const;
 
 	protected :
 

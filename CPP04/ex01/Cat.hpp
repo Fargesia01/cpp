@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class	Cat: public Animal
 {
@@ -14,9 +15,12 @@ class	Cat: public Animal
 
 		Cat& operator=(Cat &src);
 
-		void const	makeSound();
+		Brain*	getBrain() const;
+		void	makeSound() const;
 
 	private :
+
+		Brain* brain;
 
 
 };
