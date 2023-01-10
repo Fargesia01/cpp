@@ -9,6 +9,7 @@ int main()
 	FragTrap alice("Alice");
 
 	bob.guardGate();
-	bob.attack("alice");
+	alice.attack("bob");
+	bob.takeDamage(150);
 	alice.highFivesGuys();
 }

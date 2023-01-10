@@ -1,15 +1,16 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string const name): _name(name), _max_hp(10)
+ClapTrap::ClapTrap(std::string const name): _name(name)
 {
 	std::cout << "ClapTrap default constructor called" << std::endl;
 	this->_hit_p = 10;
+	this->_max_hp = 10;
 	this->_energy_p = 10;
 	this->_atk_dmg = 0;
 	return ;
 }
 
-ClapTrap::ClapTrap(ClapTrap const &src): _max_hp(10)
+ClapTrap::ClapTrap(ClapTrap const &src)
 {
 	std::cout << "ClapTrap copy constructor called" << std::endl;
 	*this = src;

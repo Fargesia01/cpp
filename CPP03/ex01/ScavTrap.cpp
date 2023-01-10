@@ -1,16 +1,17 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string const name): ClapTrap(name), _max_hp(100)
+ScavTrap::ScavTrap(std::string const name): ClapTrap(name)
 {
 	std::cout << "ScavTrap default constructor called." << std::endl;
 	this->_name = name;
+	this->_max_hp = 100;
 	this->_hit_p = 100;
 	this->_energy_p = 50;
 	this->_atk_dmg = 20;
 	return ;
 }
 
-ScavTrap::ScavTrap(ScavTrap &src): ClapTrap(src), _max_hp(100)
+ScavTrap::ScavTrap(ScavTrap &src): ClapTrap(src)
 {
 	std::cout << "ScavTrap copy constructor called." << std::endl;
 	*this = src;

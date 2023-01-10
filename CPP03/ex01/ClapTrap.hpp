@@ -24,7 +24,7 @@ class ClapTrap
 		int				_hit_p;
 		int				_energy_p;
 		int				_atk_dmg;
-		const int		_max_hp;
+		int				_max_hp;
 };
 
 #endif

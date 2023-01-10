@@ -15,10 +15,6 @@ class ScavTrap : public ClapTrap
 
 		void	guardGate();
 		void	attack(const std::string &target);
-
-	private :
-
-		const int	_max_hp;
 };
 
 #endif

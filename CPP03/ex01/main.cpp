@@ -10,4 +10,6 @@ int main()
 	bob.guardGate();
 	bob.attack("alice");
 	alice.attack("bob");
+	bob.takeDamage(95);
+	bob.beRepaired(30);
 }
