@@ -12,11 +12,11 @@ class	Animal
 		Animal(Animal &src);
 		virtual ~Animal(void);
 
-		Animal& operator=(Animal &src);
+		virtual Animal& operator=(const Animal &src);
 
 		std::string	getType() const;
 		virtual void	makeSound() const;
-		virtual  Brain*	getBrain() const;
+		virtual  Brain*	getBrain() const = 0;
 
 	protected :
 

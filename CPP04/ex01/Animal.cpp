@@ -19,7 +19,7 @@ Animal::~Animal(void)
 	return ;
 }
 
-Animal &	Animal::operator=(Animal &src)
+Animal &	Animal::operator=(const Animal &src)
 {
 	std::cout << "Animal assignation operator called." << std::endl;
 	this->type = src.type;

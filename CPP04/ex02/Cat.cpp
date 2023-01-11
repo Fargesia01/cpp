@@ -30,7 +30,7 @@ Cat &	Cat::operator=(const Cat &src)
 	return (*this);
 }
 
-Animal &	Cat::operator=(const Animal &src)
+AAnimal &	Cat::operator=(const AAnimal &src)
 {
 	std::cout << "Cat override animal assignation operator" << std::endl;
 	this->type = src.getType();

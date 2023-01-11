@@ -2,10 +2,10 @@
 # define CAT_HPP
 
 #include <iostream>
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class	Cat: public Animal
+class	Cat: public AAnimal
 {
 	public :
 
@@ -14,7 +14,7 @@ class	Cat: public Animal
 		virtual ~Cat(void);
 
 		Cat& operator=(const Cat &src);
-		virtual Animal& operator=(const Animal &src);
+		virtual AAnimal& operator=(const AAnimal &src);
 
 		virtual Brain*	getBrain() const;
 		virtual void	makeSound() const;

@@ -2,10 +2,10 @@
 # define DOG_HPP
 
 #include <iostream>
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class	Dog: public	Animal
+class	Dog: public	AAnimal
 {
 	public :
 
@@ -14,7 +14,7 @@ class	Dog: public	Animal
 		virtual ~Dog(void);
 
 		Dog& operator=(const Dog &src);
-		virtual Animal& operator=(const Animal &src);
+		virtual AAnimal& operator=(const AAnimal &src);
 
 		virtual Brain* 	getBrain() const;
 		virtual void	makeSound() const;
